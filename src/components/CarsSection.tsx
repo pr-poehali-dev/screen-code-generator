@@ -26,13 +26,13 @@ const CarsSection = () => {
   ];
 
   return (
-    <section id="cars" className="py-20 px-6">
+    <section id="cars" className="py-20 px-6 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Автомобили
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             От суперкаров до гоночных болидов — исследуйте мир
             высокопроизводительных машин
           </p>
@@ -42,7 +42,7 @@ const CarsSection = () => {
           {cars.map((car, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 group"
+              className="bg-white rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 group shadow-lg hover:shadow-xl"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -50,14 +50,14 @@ const CarsSection = () => {
                   alt={car.title}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
                   {car.title}
                 </h3>
-                <p className="text-muted-foreground mb-4">{car.description}</p>
+                <p className="text-gray-600 mb-4">{car.description}</p>
 
                 <div className="space-y-2">
                   {car.features.map((feature, i) => (
@@ -65,9 +65,9 @@ const CarsSection = () => {
                       <Icon
                         name="CheckCircle"
                         size={16}
-                        className="text-primary"
+                        className="text-blue-600"
                       />
-                      <span className="text-sm text-foreground">{feature}</span>
+                      <span className="text-sm text-gray-700">{feature}</span>
                     </div>
                   ))}
                 </div>
